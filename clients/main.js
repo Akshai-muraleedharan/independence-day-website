@@ -5,36 +5,37 @@ const loader =document.querySelector('.loader')
 function displayLoading(){
     
      
-        loader.classList.add('display')
-     
-   
-    
+        loader.classList.add('display')  
 }
 
-function loadFunction(){
-    console.log('hello');
-    
-}
+// function displayLoaded(){
+//     loader.classList.remove('display') 
+// }
+
+
 
 function videoOutPut() {
     
     const dataOut = `
     <div class="video-container">
-        <div style="position: absolute;">
-            <img src="./assets/—Pngtree—calligraphy of happy independence day_8451875.png" class="logo_video" alt="logo">
-        </div>
-        <video muted autoplay loop class="video-holder" id="video-ele">
+        <video muted autoplay loop class="video-holder" id="video-ele" onload="loadFunction()">
             <source src="./assets/2024_08_04_19_36_08.mp4" >
         </video>
     </div>`
 
     container.innerHTML += dataOut
 }
+
+
+function loadFunction(){
+    console.log('hello');
+    
+}
 function mainController(){
 
         displayLoading()
         videoOutPut()
-       
+        // displayLoaded()
         
 }
 
