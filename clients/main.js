@@ -56,7 +56,7 @@ function videoOutPut() {
 
 
     mainController()
-
+ 
     // variables for video output 
 let videoEle =document.querySelector('#video-ele');
 let quetes =document.querySelector('#qoutes-ele')
