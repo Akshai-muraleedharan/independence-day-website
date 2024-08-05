@@ -1,66 +1,80 @@
 
 let container =document.getElementById('container')
 
+
+// video output function
 function videoOutPut() {
+    
     
     const dataOut = `
     <div class="video-container">
          <div  id="qoutes-holder" style="position: absolute; height:100vh;" >
             <p id="qoutes-ele"></p>
+            <a href="https://www.w3schools.com" id="explore-btn"  > Explore  
+            <i class="bi bi-arrow-right"></i>
+      
+            </a>
+
             
          </div>
-        <video muted autoplay loop class="video-holder" id="video-ele" onload="loadFunction()">
+        <video muted autoplay loop class="video-holder" id="video-ele" >
             <source src="./assets/2024_08_04_19_36_08.mp4" >
         </video>
     </div>`
-
+  
+  
     container.innerHTML += dataOut
+    
+   
 }
 
   
-  
-  
-
+   // page loader display function
     const loader =document.querySelector('.loader')
     function displayLoading(){
            
-            loader.classList.add('display')  
+            loader.classList.add('display') 
+           
     }
 
+    // page loader display-none function
     function displayLoaded(){
         loader.classList.remove('display') 
     }
 
-
-
-
-function loadFunction(){
-    console.log('hello');
-    
-}
-function mainController(){
-
-        displayLoading()
-        videoOutPut()
-        // displayLoaded()
+        // main functions calling
+        function mainController(){
         
-}
+                displayLoading()
+                videoOutPut()      
+        }
 
-mainController()
+    //   loader function calling
+        function onloading(){
+              displayLoaded() 
+        }
+
+
+    mainController()
+
+    // variables for video output 
 let videoEle =document.querySelector('#video-ele');
 let quetes =document.querySelector('#qoutes-ele')
+let exploreBtn =document.querySelector('#explore-btn')
 
 
-
+//    setinterval for video current time
   const stopInterval = setInterval(function() {
        
   let value =videoEle.currentTime
-
-     console.log(value);
-        
+    
         if(value > 5.66 ) {
           quetes.textContent = "1947 August 15 "
-          
+         
+        }
+
+        if(value > 7){
+            exploreBtn.classList.add('btn-visible')
         }
         
         if(value > 10 ){
@@ -84,7 +98,7 @@ let quetes =document.querySelector('#qoutes-ele')
         }
 
         if(value > 35){
-            window.location.href="./main.html"
+             window.location.href="./main.html"
         }
     }
     , 1000);
