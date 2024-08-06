@@ -1,9 +1,15 @@
+@import url('https://fonts.googleapis.com/css2?family=Mukta:wght@200;300;400;500;600;700;800&family=Playwrite+HU:wght@100..400&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
 *{
     padding: 0;
     margin: 0;
     box-sizing: border-box;
 }
 
+:root{
+    --saffron:#ff9933;
+    --india-green:#138808;
+}
 
 .video-container{
     height: 100vh;
@@ -16,10 +22,10 @@
     object-fit: cover;
 }
 
-.logo_video{
+/* .logo_video{
     width: 100px;
     margin-left: 10px;
-}
+} */
 
 .loader{
    
@@ -34,19 +40,11 @@
     width: 70px;
     text-align: center;
    }
-/*    
-   .bounce>div {
-    width: 18px;
-    height: 18px;
-    background-color: #333;
-    border-radius: 100%;
-    display: inline-block;
-    animation: sk-bouncedelay 1.4s infinite ease-in-out both;
-   } */
+
    .bounce1{
     width: 18px;
     height: 18px;
-    background-color: #ff9933;
+    background-color:var(--saffron) ;
     border-radius: 100%;
     display: inline-block;
     animation: sk-bouncedelay 1.4s infinite ease-in-out both;
@@ -158,5 +156,94 @@
     #explore-btn{
         bottom: 100px;
         font-size: 25px;
+    }
+  }
+
+
+  /* main page css start fro here */
+
+  .mainPage{
+    font-family: "Poppins", sans-serif;
+  }
+
+  .logo{
+    font-size: 16px;
+    margin: 0px;
+    padding: 5px;
+    background: black;
+    color: white;
+    border-radius: 3px;
+}
+
+.logospan1{
+    color: var(--saffron) !important;
+}
+.logospan3{
+    color: #3cd12e;
+}
+
+.nav_border{
+    box-shadow: 2px 6px 6px -7px;
+}
+
+/* .banner{
+   
+    background-image: url('./assets/banner\ \(2\).jpg');
+   background-size: cover;
+    width: 100%;
+    height: 400px;
+    background-repeat: no-repeat;
+} */
+  
+@media screen and (min-width: 320px) and (max-width:767px){
+    /* .banner{
+        
+        background-image: url('.assets/banner1.jpg');
+        width: 100%;
+        height: 160px;
+        background-repeat: no-repeat;
+        
+    } */
+}
+
+.banner{
+    display: flex;
+    justify-content: center;
+}
+
+
+
+@media screen and (min-width: 320px) and (max-width:449px){
+    .image_holder{
+        
+       
+     background-image: url('./assets/full-shot-people-celebrating-indian-republic-day.jpg');
+     background-size:cover;
+     width: 100%;
+      height: 80vh;
+      background-repeat: no-repeat;
+    }
+}
+
+@media screen and (min-width: 450px) and (max-width:1000px) {
+    .image_holder{
+     
+        background-image: url('./assets/banner1.jpg');
+       background-size:contain;
+       width: 550px;
+        height: 400px;
+        background-repeat: no-repeat;
+    }
+  }
+
+  
+@media screen and (min-width: 1001px){
+    .image_holder{
+     
+        background-image: url('./assets/banner1.jpg');
+       background-size:contain;
+       width: 500px;
+        height: 400px;
+        background-repeat: no-repeat;
     }
   }
