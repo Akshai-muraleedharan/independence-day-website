@@ -10,7 +10,7 @@ function videoOutPut() {
     <div class="video-container">
          <div  id="qoutes-holder" style="position: absolute; height:100vh;" >
             <p id="qoutes-ele"></p>
-            <a href="https://www.w3schools.com" id="explore-btn"  > Explore  
+            <a href="./mainPage.html" id="explore-btn"  > Explore  
             <i class="bi bi-arrow-right"></i>
       
             </a>
@@ -98,7 +98,7 @@ let exploreBtn =document.querySelector('#explore-btn')
         }
 
         if(value > 35){
-             window.location.href="./main.html"
+            //  window.location.href="./mainPage.html"
         }
     }
     , 1000);
